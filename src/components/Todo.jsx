@@ -37,7 +37,7 @@ function Todo() {
     function removeTask(index) {
         const newTasks = [...tasks];
         newTasks.splice(index, 1);
-setTasks(newTasks);
+        setTasks(newTasks);
     };
 
   return (
