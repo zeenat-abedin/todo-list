@@ -37,7 +37,7 @@ function Todo() {
               ))}
           </div> 
           <div className="create-task" >             
-            <CreateTask onAdd={addTask}/>       
+            <CreateTask onAddTask={addTask}/>       
           </div>
     </div>
   )
