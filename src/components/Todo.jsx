@@ -23,6 +23,15 @@ function Todo() {
             completed: true
         }
     ])
+    
+    function addTask(newTitle) {
+        if (newTitle === '') return;
+        const newTask =[...tasks, {
+            title: newTitle,
+            completed: false
+        }] ;
+        setTasks(newTask);
+    }
 
   return (
     <div  className="todo-container">
@@ -31,7 +40,10 @@ function Todo() {
               {tasks.map((task) => (
                   <Task key={task.title} task={task} tasks={tasks} />
               ))}
-        </div>          
+          </div> 
+        <input type="text" placeholder="Add a task..." onChange={(e)=>{addTask(e.target.value)}}/><br/>
+        
+        <button onClick={()=>{setTasks(tasks.filter(task => !task.completed))}} >Remove Completed Tasks</button><br/>
     </div>
   )
 }
