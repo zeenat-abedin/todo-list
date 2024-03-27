@@ -36,8 +36,9 @@ function Todo() {
                   <Task key={task.title} task={task} tasks={tasks} />
               ))}
           </div> 
-        <CreateTask onAdd={addTask}/>       
-        <button onClick={()=>{setTasks(tasks.filter(task => !task.completed))}} >Remove Completed Tasks</button><br/>
+          <div className="create-task" >             
+            <CreateTask onAdd={addTask}/>       
+          </div>
     </div>
   )
 }
