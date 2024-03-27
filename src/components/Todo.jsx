@@ -34,12 +34,19 @@ function Todo() {
         setTasks(newTasks);
     };
 
+    function removeTask(index) {
+        const newTasks = [...tasks];
+        newTasks.splice(index, 1);
+setTasks(newTasks);
+    };
+
   return (
     <div  className="todo-container">
         <div className="header">TODO ITEMS</div> 
           <div className="tasks">
               {tasks.map((task, index) => (
-                  <Task key={task.title} task={task} index={index}                         completeTask={completeTask}
+                  <Task key={task.title} task={task} index={index} completeTask={completeTask}
+                      removeTask={removeTask}
                   />
               ))}
           </div> 
