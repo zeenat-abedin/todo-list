@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Todo.css'
+import CreateTask from './CreateTask';
 
 function Task({ task, onDelete }) {
     return <div className='task' >
@@ -23,7 +24,7 @@ function Todo() {
             completed: true
         }
     ])
-    
+
     function addTask(newTitle) {
         if (newTitle === '') return;
         const newTask =[...tasks, {
@@ -41,8 +42,7 @@ function Todo() {
                   <Task key={task.title} task={task} tasks={tasks} />
               ))}
           </div> 
-        <input type="text" placeholder="Add a task..." onChange={(e)=>{addTask(e.target.value)}}/><br/>
-        
+        <CreateTask  onAdd={addTask}/>       
         <button onClick={()=>{setTasks(tasks.filter(task => !task.completed))}} >Remove Completed Tasks</button><br/>
     </div>
   )
