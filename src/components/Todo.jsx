@@ -28,12 +28,19 @@ function Todo() {
         setTasks(newTask);
     }
 
+    function completeTask(index) {
+        const newTasks = [...tasks];
+        newTasks[index].completed = true;
+        setTasks(newTasks);
+    };
+
   return (
     <div  className="todo-container">
         <div className="header">TODO ITEMS</div> 
           <div className="tasks">
               {tasks.map((task, index) => (
-                  <Task key={task.title} task={task} index={index} />
+                  <Task key={task.title} task={task} index={index}                         completeTask={completeTask}
+                  />
               ))}
           </div> 
           <div className="create-task" >             
