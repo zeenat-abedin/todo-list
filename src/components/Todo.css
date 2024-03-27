@@ -1,3 +1,16 @@
  body {
     background: #ffad41;
 }
+
+.todo-container{
+    background: #292121;
+    color: #ffffff;
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}

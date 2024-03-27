@@ -3,7 +3,8 @@ import './Todo.css'
 
 function Todo() {
   return (
-    <div>
+    <div  className="todo-container">
+      <h1>To Do List</h1>
       
     </div>
   )
