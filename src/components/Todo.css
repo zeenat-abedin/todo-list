@@ -19,6 +19,17 @@
     margin: 0.5em;
 }
 
+.task button{
+      background: rgb(12, 124, 251);
+      border-radius: 5px;
+      margin: 0px 5px;
+      padding: 3px 5px;
+      border: none;
+      cursor: pointer;
+      color: white;
+      float: right;
+    }
+
 .header{
     margin: 0.5em;
     font-size: 2em;
@@ -26,5 +37,5 @@
 }
 
 .create-task{
-
+    
 }
