@@ -1,7 +1,7 @@
 
-function Task({ task, onDelete }) {
+function Task({ task, index, completeTask }) {
     return (
-    <div className='task' >
+    <div className='task' style={{ textDecoration: task.completed ? "line-through" : "" }}>
         {task.title} 
     </div>
     )

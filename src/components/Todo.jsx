@@ -32,8 +32,8 @@ function Todo() {
     <div  className="todo-container">
         <div className="header">TODO ITEMS</div> 
           <div className="tasks">
-              {tasks.map((task) => (
-                  <Task key={task.title} task={task} tasks={tasks} />
+              {tasks.map((task, index) => (
+                  <Task key={task.title} task={task} index={index} />
               ))}
           </div> 
           <div className="create-task" >             
