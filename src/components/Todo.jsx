@@ -1,13 +1,7 @@
 import { useState } from 'react'
 import './Todo.css'
 import CreateTask from './CreateTask';
-
-function Task({ task, onDelete }) {
-    return <div className='task' >
-        {task.title} 
-    </div>
-}
-
+import Task from './Task';
 
 function Todo() {
     const [tasks, setTasks] = useState([
@@ -27,7 +21,7 @@ function Todo() {
 
     function addTask(newTitle) {
         if (newTitle === '') return;
-        const newTask =[...tasks, {
+        const newTask = [...tasks, {
             title: newTitle,
             completed: false
         }] ;
@@ -42,7 +36,7 @@ function Todo() {
                   <Task key={task.title} task={task} tasks={tasks} />
               ))}
           </div> 
-        <CreateTask  onAdd={addTask}/>       
+        <CreateTask onAdd={addTask}/>       
         <button onClick={()=>{setTasks(tasks.filter(task => !task.completed))}} >Remove Completed Tasks</button><br/>
     </div>
   )
